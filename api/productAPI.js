@@ -88,8 +88,9 @@ router.put('/:id', [
 // Delete all products
 router.delete('/', async (req, res) => {
     try {
-        await Product.deleteMany({});
-        res.status(204).json({ message: 'All products deleted' });
+        const deletedProducts = await Product.deleteMany({});
+        const deletedSwapOrders = await SwapOrder.deleteMany({});
+        res.status(200).json({ message: 'All products deleted' , deletedProducts: deletedProducts.deletedCount, deletedSwapOrders: deletedSwapOrders.deletedCount});
     } catch (err) {
         console.error(`Error deleting products: ${err.message}`);
         res.status(500).json({ error: 'Internal server error' });
