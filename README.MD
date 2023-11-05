@@ -42,45 +42,45 @@ To get started, follow these simple steps:
 ## API DOCUMENTATION
 Here's a list of the amazing APIs at your disposal:
 
-    ### Users 
-    - **GET /users**: Returns a list of all users.
-    - **GET /users/:id**: Returns a specific user based on the ID.
-    - **POST /users**: Creates a new user.
-        - Request Body Fields:
-            - `firstName`: The first name of the user (required).
-            - `lastName`: The last name of the user (required).
-            - `email`: The email address of the user (required). It must be a valid email format and not already in use.
-    - **PUT /users/:id**: Updates an existing user based on the ID.
-    - **DELETE /users**: Deletes all users.
-    - **DELETE /users/:id**: Deletes a user based on the ID.
+### Users 
+- **GET /users**: Returns a list of all users.
+- **GET /users/:id**: Returns a specific user based on the ID.
+- **POST /users**: Creates a new user.
+    - Request Body Fields:
+        - `firstName`: The first name of the user (required).
+        - `lastName`: The last name of the user (required).
+        - `email`: The email address of the user (required). It must be a valid email format and not already in use.
+- **PUT /users/:id**: Updates an existing user based on the ID.
+- **DELETE /users**: Deletes all users.
+- **DELETE /users/:id**: Deletes a user based on the ID.
 
-    *When a user is deleted, associated swap orders are automatically removed.*
+*When a user is deleted, associated swap orders are automatically removed.*
 
-    ### Products 
-    - **GET /products**: Returns a list of all products.
-    - **GET /products/:id**: Returns a specific product based on the ID.
-    - **POST /products**: Creates a new product.
-        - Request Body Fields:
-            - `name` (required): The name of the product.
-            - `image` (required): An array of URLs for the product images (1 URL minimum). Each URL must be a valid HTTP, HTTPS, or FTP link.
-    - **PUT /products/:id**: Updates an existing product based on the ID.
-    - **DELETE /products**: Deletes all products.
-    - **DELETE /products/:id**: Deletes a product based on the ID.
+### Products 
+- **GET /products**: Returns a list of all products.
+- **GET /products/:id**: Returns a specific product based on the ID.
+- **POST /products**: Creates a new product.
+    - Request Body Fields:
+        - `name` (required): The name of the product.
+        - `image` (required): An array of URLs for the product images (1 URL minimum). Each URL must be a valid HTTP, HTTPS, or FTP link.
+- **PUT /products/:id**: Updates an existing product based on the ID.
+- **DELETE /products**: Deletes all products.
+- **DELETE /products/:id**: Deletes a product based on the ID.
 
-    *When a product is deleted, associated swap orders are automatically removed.*
+*When a product is deleted, associated swap orders are automatically removed.*
 
-    ### Swap Orders
-    - **GET /swap-orders**: Returns a list of all swap orders.
-    - **GET /swap-orders/:id**: Returns a specific swap order based on the ID.
-    - **GET /swap-orders/user/:id**: Returns swap orders associated with a specific user.
-    - **GET /swap-orders/product/:id**: Returns swap orders associated with a specific product.
-    - **POST /swap-orders**: Creates a new swap order.
-        - Request Body Fields:
-            - `products` (required): An array of product IDs involved in the swap order. At least 2 unique product IDs are required.
-            - `users` (required): An array of user IDs involved in the swap order. Exactly 2 unique user IDs are required.
-    - **PUT /swap-orders/:id**: Updates an existing swap order.
-    - **DELETE /swap-orders**: Deletes all swap orders.
-    - **DELETE /swap-orders/:id**: Deletes a swap order based on the ID.
+### Swap Orders
+- **GET /swap-orders**: Returns a list of all swap orders.
+- **GET /swap-orders/:id**: Returns a specific swap order based on the ID.
+- **GET /swap-orders/user/:id**: Returns swap orders associated with a specific user.
+- **GET /swap-orders/product/:id**: Returns swap orders associated with a specific product.
+- **POST /swap-orders**: Creates a new swap order.
+    - Request Body Fields:
+        - `products` (required): An array of product IDs involved in the swap order. At least 2 unique product IDs are required.
+        - `users` (required): An array of user IDs involved in the swap order. Exactly 2 unique user IDs are required.
+- **PUT /swap-orders/:id**: Updates an existing swap order.
+- **DELETE /swap-orders**: Deletes all swap orders.
+- **DELETE /swap-orders/:id**: Deletes a swap order based on the ID.
 
 ## SANITIZATION AND VALIDATION
 All user inputs are sanitized and validated to prevent common security issues such NoSQL Injection. This project utilizes Express Validator and follows best practices to ensure the safety and security of your data.
