@@ -15,7 +15,7 @@ Are you ready to explore our amazing APIs? 🎉
   - [Swap Orders](#swap-orders)
 - [Sanitization and Validation](#sanitization-and-validation)
 - [Testing](#testing)
-- [ContactS](#contacts)
+- [Contacts](#contacts)
 
 ## TECH STACK ⛓️
 - **Node.js**: A runtime environment for executing JavaScript code on the server-side.
