@@ -16,7 +16,7 @@ Are you ready to explore our amazing APIs? 🎉
 - [Testing](#testing)
 - [Contacts](#contacts)
 
-## TECH STACK ⛓️
+## TECH STACK
 - **Node.js**: A runtime environment for executing JavaScript code on the server-side.
 - **Express.js**: A web application framework for building robust and efficient web applications.
 - **Express Validator**: A set of express.js middlewares and sanitizer functions.
@@ -27,7 +27,7 @@ Are you ready to explore our amazing APIs? 🎉
 - **Jest**: A JavaScript testing framework.
 - **Supertest**: A library for testing HTTP assertions.
 
-## QUICK START 🚀
+## QUICK START
 To get started, follow these simple steps:
 
 1. Clone the Repo: `git clone https://github.com/diegoddie/S2I_FullStack_NodeJS.git`
