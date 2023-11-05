@@ -6,7 +6,6 @@ LookBook is my **Node.js** project for the Start2Impact's master in Full Stack D
 For further details please take a look at the presentation inside the repo.
 Are you ready to explore our amazing APIs? 🎉
 
-- [Introduction](#introduction)
 - [Tech Stack](#tech-stack)
 - [Quick Start](#quick-start)
 - [API Documentation](#api-documentation)
