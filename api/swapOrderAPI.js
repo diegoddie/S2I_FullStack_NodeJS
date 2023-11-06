@@ -136,8 +136,8 @@ router.put('/:id', [
 // Delete all swap orders
 router.delete('/', async (req, res) => {
     try {
-        await SwapOrder.deleteMany({});
-        res.status(200).json({ message: 'All swap orders deleted' });
+        const deletedSwapOrders = await SwapOrder.deleteMany({});
+        res.status(200).json({ message: 'All swap orders deleted', deletedSwapOrders: deletedSwapOrders.deletedCount });
     } catch (err) {
         console.error(`Error deleting swap orders: ${err.message}`);
         res.status(500).json({ error: 'Internal server error' });
